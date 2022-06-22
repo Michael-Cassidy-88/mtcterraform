@@ -27,3 +27,21 @@ terraform output
 
 join(":", [docker_container.nodered_container.ip_address, docker_container.nodered_container.ports[0].external])
 # within the terraform console, joins the IP Address of the container and the first external port
+
+count
+# accepts a whole number, and creates that many instances of the resource or module
+
+count.index
+# The index number corresponding to the instance
+
+docker_container.nodered_container[*].name
+# uses the splat expression within the terraform console to receive every name of the nodered containers that have been created
+
+[for i in docker_container.nodered_container[*]: i.name]
+# within the terraform console, lists every name of the nodered containers that have been created
+
+[for i in docker_container.nodered_container[*]: i.ports[0]["external"]]
+# within the terraform console, lists every external port of the nodered containers that have been created
+
+[for i in docker_container.nodered_container[*]: i.ports[*]["external"]]
+# within the terraform console, makes one list for each external port of the nodered containers that have been created
