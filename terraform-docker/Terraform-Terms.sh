@@ -111,3 +111,18 @@ terraform workspace list
 
 terraform workspace select dev
 # selects the workspace you want to be in 
+
+terraform graph -type=plan-destroy | dot -Tpdf > graph-applied.pdf
+# makes a graph displaying the destroy plan and puts it into a pdf
+
+terraform destroy -target=module.container[0].docker_container.nodered_container
+# destroys one container
+
+keys(local.deployment)
+# within terraform console, displays the keys to the locals block
+
+values(local.deployment["nodered"])
+# within terraform console, displays the values to the nodered key
+
+{for x in [1, 2, 3, "blue"]: x => "fish"}
+# creates a map 
