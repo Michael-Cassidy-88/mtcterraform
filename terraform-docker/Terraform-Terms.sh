@@ -126,3 +126,6 @@ values(local.deployment["nodered"])
 
 {for x in [1, 2, 3, "blue"]: x => "fish"}
 # creates a map 
+
+cidrsubnet("10.123.0.0/16", 8, 1)
+# gives you "10.123.1.0/24"
