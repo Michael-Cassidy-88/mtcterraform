@@ -1,0 +1,5 @@
+github_token          = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+github_owner          = "Michael-Cassidy-88"
+tfe_token             = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+aws_access_key_id     = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+aws_secret_access_key = "xxxxxxxxxxxxxxxxxxxxxxxxx"
